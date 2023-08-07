@@ -1,0 +1,117 @@
+<!-- //adam zuiderveld
+//wheel of fortune game
+ --><!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+	<title>Wheel Of Fortune!!!!</title>
+    
+    <link rel="stylesheet" type="text/css" href="guess.css">
+    <link rel="stylesheet" type="text/css" href="wof.css">
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+    <script type="text/javascript" src="Winwheel.js"></script>
+</head>
+<body>
+<div id="buttons">
+<!-- spin button -->
+<button id="myBtn" style="display: none;" class="button" alt="Spin" onClick="startSpin();" />Spin</button>
+<!-- buy a vowel button -->
+<button id="vowels" style="display: none;" class="button">Buy a vowel for $250</button>
+
+                        <button id="spin_button"  alt="Spin" onClick="startSpin();" style="display: none;" /> Spintest</button>
+
+<!--  guess a word button -->
+<!-- <button id="guess" style="display: none;" class="button">Guess Word</button>
+ -->	
+ <div id="game">
+<table style="width:100%">
+
+	</div id="start">
+	<button id="startGame" class="button">Start Game</button>
+	</div>
+    
+
+			<tr>
+				<th>Who's Turn?</th>
+				<th>Amount spun for</th>
+				<th>Word to Guess </th>
+				<th>Player 1 Points Earned </th>
+				<th>Player 2 Points Earned </th>
+			</tr>
+				<td>	<p id="pTurn"></p>	</td>
+				<td>	<p id="spinValue"></p>	</td>
+				<td>	<p id="underscores"></p>	</td>
+				<td>	<p id="pointsPlayer1"></p>	</td>
+				<td>	<p id="pointsPlayer2"></p>	</td>
+</table>
+    <div id="arrow"><img src="arrow.png" alt="arrow"></div>
+    <canvas id="canvas" width="450" height="450">
+        <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
+    </canvas>
+</div>
+    
+<!-- <input type="text" name:"userInput" value="A" style="display: inline;">
+ -->
+<div id="letterBoard" style="display: none;">
+<div id="girl"></div>
+
+    
+    
+<!-- <button style="height:35px;width:35px" id="A" onclick="setLetter('A');">A</button>-->
+<button style="height:35px;width:35px" id="B" onclick="setLetter('B');">B</button>
+<button style="height:35px;width:35px" id="C" onclick="setLetter('C');">C</button>
+<button style="height:35px;width:35px" id="D" onclick="setLetter('D');">D</button>
+<!-- <button style="height:35px;width:35px" id="E" onclick="setLetter('E');">E</button> -->
+<button style="height:35px;width:35px" id="F" onclick="setLetter('F');">F</button>
+<button style="height:35px;width:35px" id="G" onclick="setLetter('G');">G</button>
+<button style="height:35px;width:35px" id="H" onclick="setLetter('H');">H</button>
+
+<br></br>
+
+<!-- <button style="height:35px;width:30px" id="I" onclick="setLetter('I');">I</button> -->
+<button style="height:35px;width:30px" id="J" onclick="setLetter('J');">J</button>
+<button style="height:35px;width:30px" id="K" onclick="setLetter('K');">K</button>
+<button style="height:35px;width:30px" id="L" onclick="setLetter('L');">L</button>
+<button style="height:35px;width:30px" id="M" onclick="setLetter('M');">M</button>
+<button style="height:35px;width:30px" id="N" onclick="setLetter('N');">N</button>
+<!-- <button style="height:35px;width:30px" id="O" onclick="setLetter('O');">O</button> -->
+<button style="height:35px;width:30px" id="P" onclick="setLetter('P');">P</button>
+<button style="height:35px;width:30px" id="Q" onclick="setLetter('Q');">Q</button>
+
+<br></br>
+
+<button style="height:35px;width:30px" id="R" onclick="setLetter('R');">R</button>
+<button style="height:35px;width:30px" id="S" onclick="setLetter('S');">S</button>
+<button style="height:35px;width:30px" id="T" onclick="setLetter('T');">T</button>
+<!-- <button style="height:35px;width:30px" id="U" onclick="setLetter('U');">U</button> -->
+<button style="height:35px;width:30px" id="V" onclick="setLetter('V');">V</button>
+<button style="height:35px;width:30px" id="W" onclick="setLetter('W');">W</button>
+<button style="height:35px;width:30px" id="X" onclick="setLetter('X');">X</button>
+<button style="height:35px;width:30px" id="Y" onclick="setLetter('Y');">Y</button>
+<button style="height:35px;width:30px" id="Z" onclick="setLetter('Z');">Z</button>
+
+</div id="letterBoard">
+<!-- vowels only -->
+<div id="vowelBoard" style="display: none;">
+<div id="girl"></div>
+<button style="height:35px;width:35px" id="A" onclick="setVowel('A');">A</button>
+<button style="height:35px;width:35px" id="E" onclick="setVowel('E');">E</button>
+<button style="height:35px;width:30px" id="I" onclick="setVowel('I');">I</button>
+<button style="height:35px;width:30px" id="O" onclick="setVowel('O');">O</button>
+<button style="height:35px;width:30px" id="U" onclick="setVowel('U');">U</button>
+</div>
+<!--  all guessed #s printed below..-->
+<div id="name"></div>
+<div id="output"></div>
+<!-- what players turn is it? -->
+
+
+</div id="game">
+<script type="text/javascript" src="model.js"></script>  
+<script type="text/javascript" src="view.js"></script>  
+<script type="text/javascript" src="controller.js"></script>  
+ 
+</body>
+</html>
